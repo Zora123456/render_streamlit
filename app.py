@@ -56,25 +56,28 @@ if graficos['histogram'] or graficos['scatter']:
     ## Verifica se o botão foi clicado
     #
     if hist_button: 
-        
-        
+    
+    
         ## Verifica se o histogram foi selecionado
         #
         if graficos['histogram']:
-            st.write('Histograma da distância percorrida por um veículo.')
-            fig = px.histogram(dados, x="odometer")
-            st.plotly_chart(fig, use_container_width=True)
+            with st.spinner("Gerando gráficos, aguarde..."):
+                st.write('Histograma da distância percorrida por um veículo.')
+                fig = px.histogram(dados, x="odometer")
+                st.plotly_chart(fig, use_container_width=True)
 
         ## Verifica se o scatter foi selecionado
         # 
         if graficos['scatter']:
-            st.write('Disperção da distância percorrida x Preço.')
-            fig2 = px.scatter(dados, x="odometer", y="price")
-            st.plotly_chart(fig2, use_container_width=True)
+            with st.spinner("Gerando gráficos, aguarde..."):
+                st.write('Disperção da distância percorrida x Preço.')
+                fig2 = px.scatter(dados, x="odometer", y="price")
+                st.plotly_chart(fig2, use_container_width=True)
 
         ## Exibe uma tabela com os dados de origem
-        st.write('Tabela de dados:')
-        st.write(dados)
+        with st.spinner("Gerando Tabela, aguarde..."):
+            st.write('Tabela de dados:')
+            st.write(dados)
 
 else:
     st.error("Erro. Seleciono ao menos um tipo de gráfico.")
