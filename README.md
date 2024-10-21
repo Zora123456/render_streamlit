@@ -60,4 +60,4 @@ Este repositório contém o trabalho prático da Sprint 5, cujo objetivo é cria
 
 ### Link para Teste da Aplicação
 
-[Clique aqui e confira!](https://www.google.com.br)
+[Clique aqui e confira!](https://sprint5.mrsdeveloper.pro.br)
